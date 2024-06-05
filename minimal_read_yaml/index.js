@@ -95,12 +95,6 @@ async function main() {
         const value = val[1];
         core.info(`${key} : ${value}`);
         core.setOutput(key,value);
-        if ( envVarPrefix )
-        {
-            k=key.replace(reEnvVarPattern,"_");
-            core.info(`${envVarPrefix}_${k}=${value}`);
-            core.exportVariable(`${envVarPrefix}_${k}`,value);
-        }
       });
     });
   } catch (error) {
