@@ -1,0 +1,14 @@
+name: "minimal yaml reader"
+description: "This action reads a YAML configuration files."
+author: "nichmor"
+branding:
+  icon: box
+  color: blue
+inputs:
+  config:
+    description: "Config file name"
+    required: true
+    default: ""
+runs:
+  using: "node20"
+  main: "dist/index.js"
